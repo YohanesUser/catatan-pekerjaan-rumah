@@ -112,6 +112,43 @@ main .content {
     background: rgba(255, 255, 255, 0.2);
 }
 
+body, html {
+    height: 100%; /* Menjamin tinggi halaman dan body 100% */
+    display: flex;
+    flex-direction: column; /* Mengatur layout menjadi kolom */
+    font-family: 'Arial', sans-serif;
+    background: url('https://github.com/YohanesUser/galeri/blob/main/Screenshot%202025-01-17%20232746.png?raw=true') no-repeat center center/cover;
+    color: #fff;
+    overflow-x: hidden; /* Menghindari scroll horizontal */
+}
+
+/* Styling kontainer utama */
+.dashboard-container {
+    flex: 1; /* Membuat konten utama mengambil sisa ruang */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px 40px;
+    width: 95%;
+    max-width: 800px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    margin-top: 70px; /* Memberikan ruang dari atas halaman */
+}
+
+/* Styling footer */
+.footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
 /* Responsiveness */
 @media (max-width: 768px) {
     .dashboard-container {
