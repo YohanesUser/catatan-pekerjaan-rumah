@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const gistUrl = 'https://gist.githubusercontent.com/YohanesUser/f0225f3dd2219eccd14c2a41565723a4/raw/361e8eee70d6b9e61c2f0919c6fcacc4e7f65189/pr-bjawa.md'; // URL raw Gist
+    const gistUrl = 'https://gist.githubusercontent.com/YohanesUser/f0225f3dd2219eccd14c2a41565723a4/raw/9e77c1d71cf4c748313b47f0cf69cef81ffb2f53/pr-bjawa.md'; // URL raw Gist
     const tasksList = document.getElementById('tasks-list');
 
     // Gunakan Markdown-It untuk merender Markdown
