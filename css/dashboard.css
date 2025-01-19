@@ -133,7 +133,7 @@ body, html {
     max-width: 800px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     text-align: center;
-    margin-top: 70px; /* Memberikan ruang dari atas halaman */
+    margin-top: 250px; /* Memberikan ruang dari atas halaman */
 }
 
 /* Styling footer */
@@ -146,6 +146,11 @@ body, html {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #fff;
 }
 
 
