@@ -1,0 +1,130 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.book-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px 40px;
+    width: 100%;
+    max-width: 900px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    display: flex; /* Menambahkan flexbox di sini */
+    flex-direction: column; /* Mengatur elemen di dalamnya ke arah kolom */
+    justify-content: center; /* Menjaga elemen tetap di tengah */
+    align-items: center; /* Menjaga tombol tetap di tengah horizontal */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Tombol */
+.button {
+    display: block; /* Tombol mengisi lebar penuh */
+    width: 100%;
+    padding: 12px 20px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center; /* Teks tetap di tengah */
+    color: #fff;
+    background: #4caf50;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Efek bayangan */
+    transition: all 0.3s ease;
+    cursor: pointer;
+    max-width: 300px; /* Membatasi lebar tombol */
+}
+
+.button:hover {
+    background: #45a049;
+    transform: translateY(-3px); /* Efek angkat saat hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Bayangan lebih besar saat hover */
+}
+
+.button:active {
+    background: #388e3c;
+    transform: translateY(2px); /* Efek saat tombol ditekan */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.back-button {
+    background: #f44336;
+}
+
+.back-button:hover {
+    background: #d32f2f;
+}
+
+.back-button:active {
+    background: #c62828;
+}
+
+main {
+    margin-top: 20px;
+}
+
+/* Subjects Section */
+.subjects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+}
+
+.subject {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background 0.3s ease;
+    cursor: pointer;
+}
+
+.subject:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .subject {
+        font-size: 0.9rem;
+        padding: 15px;
+    }
+
+    .button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}

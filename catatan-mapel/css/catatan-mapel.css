@@ -1,0 +1,60 @@
+/* Global Styles */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('https://github.com/YohanesUser/galeri/blob/main/Screenshot%202025-01-17%20232746.png?raw=true') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container {
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.7); /* Kolom putih dengan transparansi */
+    border-radius: 10px; /* Membuat sudut kolom lebih halus */
+}
+
+h1, p, #countdown {
+    color: black; /* Mengubah warna tulisan menjadi hitam */
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+#countdown {
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+#countdown span {
+    font-weight: bold;
+}
+
+/* Spinner */
+.spinner {
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid #4caf50;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+/* Spinner Animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
