@@ -7,13 +7,15 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    background: linear-gradient(135deg, #1e3c72, #ff46c8);
+    background-size: 400% 400%; /* Memperbesar latar belakang agar animasi lebih halus */
     color: #fff;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
+    animation: rotateGradient 10s infinite; /* Menambahkan animasi */
 }
 
 .book-container {
@@ -145,5 +147,17 @@ footer {
     .button {
         font-size: 1rem;
         padding: 10px 20px;
+    }
+}
+/* Animasi untuk gradien */
+@keyframes rotateGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
     }
 }
