@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const contentDiv = document.getElementById("book-content");
 
     // Ganti dengan URL Google Docs yang dapat diakses publik untuk ekspor HTML
-    const googleDocsUrl = 'https://docs.google.com/document/d/1M8pjy71x3TXm6z9p4UUQJrmnaVCH-N5Qlj0NIB1RjSk/export?format=html';
+    const googleDocsUrl = 'https://docs.google.com/document/d/1B55whaX7K5NpR6ZQz_cyyMGUXvc_SM2P8AuUHhBxXZw/export?format=html';
 
     fetch(googleDocsUrl)
         .then(response => response.text())
