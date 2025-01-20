@@ -1,4 +1,3 @@
-/* Body styling */
 body {
     font-family: 'Comic Sans MS', cursive, sans-serif;
     margin: 0;
@@ -31,7 +30,7 @@ header {
 header h1 {
     font-family: 'Comic Sans MS', cursive, sans-serif; /* Same font for consistency */
     font-size: 1.5rem; /* Smaller font size */
-    font-weight: bold; /* Make the text bold */
+    font-weight: normal; /* Make the text normal weight */
 }
 
 /* Hover effect for h1 */
