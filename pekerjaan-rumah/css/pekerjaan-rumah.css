@@ -28,7 +28,7 @@ header {
 
 /* Styling for h1 inside header */
 header h1 {
-    font-family: 'Comic Sans MS', cursive, sans-serif; /* Same font for consistency */
+    font-family: 'Times New Roman', Times, serif;
     font-size: 1.5rem; /* Smaller font size */
     font-weight: normal; /* Make the text normal weight */
 }
