@@ -1,137 +1,193 @@
+/* Body styling */
 body {
-    font-family: Arial, sans-serif;
-    background-image: url('https://github.com/YohanesUser/galeri/blob/main/LOGO%20TIKUS%20PRODUCTION.jpg?raw=true'); /* URL gambar */
-    background-size: cover; /* Gambar akan memenuhi seluruh layar */
-    background-repeat: no-repeat; /* Tidak mengulang gambar */
-    background-attachment: fixed; /* Latar belakang tetap saat scroll */
-    background-position: center center; /* Pusatkan gambar di layar */
+    font-family: 'Comic Sans MS', cursive, sans-serif;
     margin: 0;
     padding: 0;
-    margin: 0;
-    padding-top: 60px; /* Sesuaikan dengan tinggi header */
+    background-image: url('https://github.com/YohanesUser/galeri/blob/main/LOGO%20TIKUS%20PRODUCTION.jpg?raw=true'); /* Path ke file gambar lokal */
+    background-size: cover; /* Agar gambar menutupi seluruh background */
+    background-position: center; /* Agar gambar berada di tengah */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
-
 
 header {
-    background-color: rgba(53, 199, 204, 0.9); /* Transparansi pada header */
+    background-color: #00b7ff; /* Tomato red */
     color: white;
     text-align: center;
-    padding: 20px 0;
-    position: fixed; /* Membuat header tetap di atas */
-    top: 0; /* Menempel pada bagian atas */
-    left: 0; /* Menempel pada bagian kiri */
-    width: 100%; /* Memastikan header mencakup seluruh lebar halaman */
-    z-index: 1000; /* Agar selalu di atas elemen lainnya */
+    font-size: 2rem; /* Bigger font size */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for h1 inside header */
+header h1 {
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Same font for consistency */
+    font-size: 1.5rem; /* Smaller font size */
+    font-weight: bold; /* Make the text bold */
+}
+
+/* Hover effect for h1 */
+header h1:hover {
+    transform: scale(1.05); /* Slightly increase size on hover */
+    color: #00b7ff; /* Change color to orange on hover */
 }
 
 
-h1 {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    color: white; /* Warna teks menjadi putih */
-    font-size: 2em; /* Sesuaikan ukuran font */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Tambahkan bayangan agar teks lebih jelas */
+/* Header hover styling */
+header:hover {
+    background-color: #00b7ff; /* OrangeRed */
+    transform: scale(1.05);
 }
 
+/* Main content styling */
 main {
+    flex: 1;
     padding: 20px;
-}
-
-h2 {
-    font-size: 1.5em;
-    color: #fff2f2;
-}
-
-.tasks ul {
-    list-style: none;
-    padding: 0;
-}
-
-.tasks li {
-    background-color: white;
-    margin: 10px 0;
-    padding: 15px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.task-name {
-    font-size: 1.2em;
-    color: #333;
-}
-
-.mark-done {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.mark-done:hover {
-    background-color: #45a049;
-}
-
-img {
-    max-width: 100%; /* Membatasi lebar maksimum gambar ke ukuran elemen induknya */
-    height: auto; /* Menyesuaikan tinggi secara proporsional */
-    display: block; /* Menghilangkan jarak di bawah gambar */
-    margin: 10px auto; /* Membuat gambar terpusat secara horizontal */
-    border-radius: 5px; /* Opsional: tambahkan sudut bulat pada gambar */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Opsional: tambahkan bayangan */
-}
-
-
-footer {
-    background-color: #33333300;
-    color: white;
-    text-align: center;
-    position: center;
     width: 100%;
-    bottom: 0;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the content */
+    box-sizing: border-box;
 }
 
-.tasks ul {
-    list-style: none;
-    padding: 0;
-    max-width: 600px; /* Lebar maksimal untuk daftar tugas */
-    margin: 0 auto; /* Membuat daftar tugas berada di tengah */
+/* Book content */
+#book-content {
+    white-space: pre-wrap;
+    line-height: 1.8;
+    font-size: 20px;
+    color: #333;
+    background-color: #f5fffa; /* Honeydew */
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    overflow-x: auto; /* Ensures horizontal scrolling for large content */
 }
 
-.tasks li {
-    background-color: white;
-    margin: 10px 0;
-    padding: 15px;
-    border-radius: 5px;
+/* Menjadikan gambar responsif */
+#book-content img {
+    max-width: 100%; /* Gambar tidak akan melebihi lebar kontainer */
+    height: auto; /* Menjaga proporsi gambar */
+    border-radius: 8px; /* Opsional: untuk membuat gambar sedikit melengkung */
+    display: block; /* Menghindari spasi di bawah gambar */
+    margin: 20px 0; /* Memberikan jarak di atas dan bawah gambar */
+}
+
+/* Membungkus gambar untuk menjaga responsivitas */
+#book-content .image-container {
+    width: 100%;
+    overflow: hidden; /* Menghindari konten yang meluap */
+}
+
+/* Finish Button */
+.finish-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#finish-button {
+    background-color:#00b7ff;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#finish-button:hover {
+    background-color: #00b7ff; /* OrangeRed */
+    transform: scale(1.1);
+}
+
+/* Cyber link styling */
+.cyber-link-container {
     display: flex;
-    justify-content: space-between; /* Antar elemen berada di sisi yang berbeda */
+    justify-content: center;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    flex-direction: column; /* Susunan vertikal untuk tampilan satu kolom */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.cyber-link {
     text-align: center;
 }
 
-.task-name {
-    font-size: 1.2em;
-    color: #333;
-    margin-bottom: 10px; /* Memberi jarak antara nama tugas dan tombol */
-}
-
-.mark-done {
-    background-color: #4CAF50;
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #97717100;
     color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    font-size: 1rem;
 }
 
-.mark-done:hover {
-    background-color: #45a049;
+@media (max-width: 768px) {
+    body {
+        background-size: contain; /* Agar gambar menyesuaikan dengan ukuran layar */
+    }
+
+    header h1 {
+        font-size: 1rem; /* Ukuran font lebih kecil untuk perangkat seluler */
+    }
+}
+
+/* Responsive for tablets */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 0; /* Reduced padding for tablets */
+        font-size: 1.8rem;
+    }
+
+    header h1 {
+        font-size: 2.5rem; /* Reduced font size on tablet */
+        padding: 0 15px; /* Reduced padding */
+    }
+
+    #book-content {
+        font-size: 18px;
+    }
+
+    #finish-button {
+        font-size: 1.1em;
+        padding: 10px 20px;
+    }
+}
+
+/* Responsive for mobile */
+@media (max-width: 480px) {
+    header {
+        padding: 0px 0; /* Smaller padding for mobile */
+        font-size: 1.5rem;
+    }
+
+    header h1 {
+        font-size: 1.4rem; /* Reduce font size on mobile */
+        text-align: center;
+        padding: 0 10px; /* Smaller padding */
+    }
+
+    #book-content {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    #finish-button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+
+    #book-content img {
+        max-width: 100%; /* Menjaga gambar untuk tidak terpotong */
+        height: auto; /* Memastikan gambar tetap proporsional */
+    }
 }
