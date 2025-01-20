@@ -1,0 +1,211 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #4e73df, #1e3c72);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px 40px;
+    width: 100%;
+    max-width: 900px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    background: #4caf50;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #45a049;
+}
+
+.back-button {
+    background: #f44336;
+}
+
+.back-button:hover {
+    background: #d32f2f;
+}
+
+main {
+    margin-top: 20px;
+}
+
+/* Subject Info */
+.subject-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.subject {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background 0.3s ease;
+    cursor: pointer;
+}
+
+.subject h2 {
+    font-size: 1.5rem;
+    color: #ffdf00;
+}
+
+.subject:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.subject p {
+    font-size: 1rem;
+    color: #fff;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.subject {
+    text-decoration: none; /* Hilangkan garis bawah default */
+    color: inherit; /* Ikuti warna teks bawaan */
+    display: block; /* Agar tampil seperti blok */
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background 0.3s ease;
+    cursor: pointer;
+}
+
+.subject:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    .subject h2 {
+        font-size: 1.4rem;
+    }
+
+    .subject p {
+        font-size: 0.95rem;
+    }
+
+    .button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .container {
+        padding: 20px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.3rem;
+    }
+
+    .subject-info {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Menyesuaikan grid */
+    }
+
+    .subject h2 {
+        font-size: 1.3rem;
+    }
+
+    .subject p {
+        font-size: 0.9rem;
+    }
+
+    .button {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+
+    .container {
+        padding: 15px 20px;
+    }
+
+    .subject {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .subject-info {
+        grid-template-columns: 1fr; /* Menampilkan satu kolom pada layar kecil */
+    }
+
+    .subject h2 {
+        font-size: 1.2rem;
+    }
+
+    .subject p {
+        font-size: 0.85rem;
+    }
+
+    .button {
+        font-size: 0.7rem;
+        padding: 5px 10px;
+    }
+
+    .container {
+        padding: 10px 15px;
+    }
+
+    .subject {
+        padding: 10px;
+    }
+}

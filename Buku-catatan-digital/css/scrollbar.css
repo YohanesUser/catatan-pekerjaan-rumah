@@ -1,0 +1,42 @@
+/* Mengatur body agar scrollable */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Menambahkan margin dan padding pada konten */
+.content {
+    margin: 50px auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 900px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 500px; /* Membuat konten cukup tinggi untuk memunculkan scrollbar */
+    overflow-y: scroll; /* Menambahkan scrollbar vertikal */
+}
+
+/* Gaya scrollbar kustom */
+.content::-webkit-scrollbar {
+    width: 12px; /* Lebar scrollbar */
+}
+
+.content::-webkit-scrollbar-track {
+    background: rgb(255, 204, 204); /* Latar belakang dengan warna RGB cerah */
+    border-radius: 6px;
+}
+
+/* Gaya untuk bagian yang bisa digulir */
+.content::-webkit-scrollbar-thumb {
+    background: rgb(255, 128, 0); /* Warna cerah pada handle scrollbar */
+    border-radius: 6px;
+    border: 2px solid rgb(255, 255, 255); /* Border putih di sekitar handle */
+    transition: background 0.3s ease-in-out; /* Efek transisi */
+}
+
+/* Hover effect pada scrollbar */
+.content::-webkit-scrollbar-thumb:hover {
+    background: rgb(255, 0, 255); /* Efek hover dengan warna RGB cerah */
+}

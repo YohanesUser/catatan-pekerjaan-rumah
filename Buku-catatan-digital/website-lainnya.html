@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB LAINNYA</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('https://github.com/YohanesUser/galeri/blob/main/LOGO%20TIKUS%20PRODUCTION.jpg?raw=true') no-repeat center center/cover;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 30px;
+            width: 90%;
+            max-width: 1000px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #ffdf00;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            color: #ddd;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .button {
+            text-decoration: none;
+            text-align: center;
+            color: #fff;
+        }
+
+        .preview {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .preview:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .preview img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: opacity 0.3s ease;
+        }
+
+        .preview:hover img {
+            opacity: 0.9;
+        }
+
+        .preview h3 {
+            font-size: 1.2rem;
+            margin-top: 15px;
+            color: #ffdf00;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .preview h3 {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Explore WEB Lainnya</h1>
+        <p>Click untuk mengunjungi situs dari Tikus Production (kecuali Github)</p>
+        <div class="buttons">
+            <a href="https://ujiancbt.vercel.app" class="button" target="_blank">
+                <div class="preview">
+                    <img src="https://github.com/YohanesUser/galeri/blob/main/LOGO%20TIKUS%20PRODUCTION.jpg?raw=true" alt="ujiancbt 1 Preview">
+                    <h3>CBT OFFLINE</h3>
+                </div>
+            </a>
+            <a href="https://github.com/YohanesUser" class="button" target="_blank">
+                <div class="preview">
+                    <img src="https://vincent-yao27.github.io/ph-icon-gen/git.png" alt="Example 2 Preview">
+                    <img src="https://logos-world.net/wp-content/uploads/2020/11/GitHub-Logo.png" alt="Example 3 Preview">
+                    <h3>GitHub</h3>
+                </div>
+            </a>
+            <a href="https://cekkhodamku-psi.vercel.app/" class="button" target="_blank">
+                <div class="preview">
+                    <img src="https://rbtv.disway.id/upload/873fbd3afec95ceb172b85279f302a0b.jpg" alt="Example 3 Preview">
+                    <h3>Cek Khodam</h3>
+                </div>
+            </a>
+            <a href="https://cariinformasi.vercel.app/" class="button" target="_blank">
+                <div class="preview">
+                    <img src="https://github.com/YohanesUser/galeri/blob/main/LOGO%20TIKUS%20PRODUCTION.jpg?raw=true" alt="Example 4 Preview">
+                    <h3>Cari Informasi</h3>
+                </div>
+            </a>
+            <a href="https://yohanesuser.github.io/filegamerapel/" class="button" target="_blank">
+                <div class="preview">
+                    <img src="https://github.com/YohanesUser/galeri/blob/main/LOGO%20TIKUS%20PRODUCTION.jpg?raw=true" alt="Example 4 Preview">
+                    <h3>Rapel</h3>
+                </div>
+            </a>
+            <a href="https://yohanesuser.github.io/slide-show-gallery/" class="button" target="_blank">
+                <div class="preview">
+                    <img src="https://github.com/YohanesUser/galeri/blob/main/LOGO%20TIKUS%20PRODUCTION.jpg?raw=true" alt="Example 4 Preview">
+                    <h3>Gallery</h3>
+                </div>
+            </a>
+            
+        </div>
+        
+    </div>
+    <div class="counter-container">
+        <!-- hitwebcounter Code START -->
+        <a href="https://www.hitwebcounter.com" target="_blank">
+            <img src="https://hitwebcounter.com/counter/counter.php?page=18548998&style=0009&nbdigits=5&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites" border="0" />
+        </a>
+        <!-- hitwebcounter Code END -->
+    </div>
+    
+    <style>
+        /* Menempatkan penghitung di bawah halaman */
+        .counter-container {
+            text-align: center; /* Mengatur penghitung agar berada di tengah */
+            position: fixed; /* Posisi tetap agar selalu muncul di bawah */
+            bottom: 0; /* Menempatkannya di bagian bawah */
+            left: 0; /* Menjaga posisi kiri tetap */
+            width: 100%; /* Memastikan elemen lebar penuh */
+            background-color: #333; /* Warna latar belakang untuk kontras */
+            padding: 10px 0; /* Memberikan padding agar elemen tidak terlalu rapat */
+        }
+    </style>
+    <footer>
+        <p>&copy; 2025 Tikus Production</p>
+    </footer>
+    
+    <style>
+        /* Mengatur konten untuk memastikan cyber-link dan footer tidak tertutupi */
+        .content {
+            padding-bottom: 150px; /* Memberikan ruang lebih besar agar elemen tidak tertutupi */
+        }
+    
+        .cyber-link {
+            text-align: center; /* Mengatur teks agar berada di tengah */
+            padding: 10px;
+            background-color: #333; /* Warna latar belakang */
+            color: white; /* Warna teks */
+            width: 100%; /* Memastikan elemen lebar penuh */
+            position: fixed; /* Posisi fixed agar tetap di bawah */
+            bottom: 60px; /* Memberikan ruang agar tidak menutupi footer */
+            left: 0; /* Memastikan elemen berada di sisi kiri */
+        }
+    
+        footer {
+            background-color: #33333300; /* Warna latar belakang footer */
+            color: white; /* Warna teks */
+            text-align: center; /* Mengatur teks agar berada di tengah */
+            padding: 20px; /* Memberikan jarak di dalam footer */
+            font-family: Arial, sans-serif; /* Font untuk teks */
+            position: fixed; /* Memasang footer di bawah layar */
+            width: 100%; /* Footer lebar penuh */
+            bottom: 0; /* Posisi footer di bawah */
+        }
+    </style>
+    
+    
+    
+</body>
+</html>
