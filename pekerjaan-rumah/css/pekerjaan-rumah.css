@@ -7,6 +7,8 @@ body {
     background-position: center center; /* Pusatkan gambar di layar */
     margin: 0;
     padding: 0;
+    margin: 0;
+    padding-top: 60px; /* Sesuaikan dengan tinggi header */
 }
 
 
@@ -15,7 +17,13 @@ header {
     color: white;
     text-align: center;
     padding: 20px 0;
+    position: fixed; /* Membuat header tetap di atas */
+    top: 0; /* Menempel pada bagian atas */
+    left: 0; /* Menempel pada bagian kiri */
+    width: 100%; /* Memastikan header mencakup seluruh lebar halaman */
+    z-index: 1000; /* Agar selalu di atas elemen lainnya */
 }
+
 
 h1 {
     margin: 0;
