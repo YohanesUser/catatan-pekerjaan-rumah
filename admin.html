@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Admin</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 600px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .deleteBtn {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .deleteBtn:hover {
+            background-color: #c82333;
+        }
+
+        .logout-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+            transition: 0.3s;
+        }
+
+        .logout-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Daftar Pengguna</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nama Pengguna</th>
+                    <th>Waktu Login</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="userList"></tbody>
+        </table>
+        <button id="logout" class="logout-btn">Logout</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const userList = document.getElementById('userList');
+            const logoutButton = document.getElementById('logout');
+
+            let users = JSON.parse(localStorage.getItem('users')) || [];
+            let loginTimes = JSON.parse(localStorage.getItem('loginTimes')) || {};
+
+            function renderUserList() {
+                userList.innerHTML = '';
+                users.forEach((user, index) => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td>${user}</td>
+                        <td>${loginTimes[user] || 'Tidak diketahui'}</td>
+                        <td><button class='deleteBtn' data-index='${index}'>Hapus</button></td>
+                    `;
+                    userList.appendChild(tr);
+                });
+
+                document.querySelectorAll('.deleteBtn').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const index = e.target.getAttribute('data-index');
+                        delete loginTimes[users[index]];
+                        users.splice(index, 1);
+                        localStorage.setItem('users', JSON.stringify(users));
+                        localStorage.setItem('loginTimes', JSON.stringify(loginTimes));
+                        renderUserList();
+                    });
+                });
+            }
+
+            renderUserList();
+
+            logoutButton.addEventListener('click', () => {
+                sessionStorage.removeItem('user');
+                window.location.href = 'index.html';
+            });
+        });
+    </script>
+</body>
+</html>
