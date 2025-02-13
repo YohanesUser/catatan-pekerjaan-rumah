@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
             loginTimes[username] = loginTime;
             localStorage.setItem('loginTimes', JSON.stringify(loginTimes));
 
+
             // Redirect berdasarkan username
             if (username.toLowerCase() === 'admin1') {
                 window.location.href = 'admin.html';
